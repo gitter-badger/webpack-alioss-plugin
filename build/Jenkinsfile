@@ -1,7 +1,6 @@
 node {
    echo '开始构建......'
    stage('Git') {
-       checkout()
        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/borenXue/webpack-alioss-plugin.git']]])
        sh 'nrm use taobao; nrm current; nvm current;'
    }
