@@ -1,16 +1,17 @@
 node {
-   echo 'Hello World'
+   echo '开始构建......'
    stage('Git') {
-       checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/borenXue/tools_sass.git']]])
-       sh 'ls'
+       checkout()
+       sh 'nrm use taobao; nrm current; nvm current;'
    }
    stage('Test') {
-       echo 'Test stage ....'
+       echo '开始运行测试用例 ....'
    }
    stage('Build') {
-       echo 'Build stage ....'
+       echo '开始执行构建 ....'
    }
-   stage('Upload') {
-       echo 'Upload stage ....'
+   stage('NPM') {
+       sh 'nrm use npm; nrm current; nvm current;'
+       echo '开始发布产品 ....'
    }
 }
