@@ -14,5 +14,8 @@ node {
    stage('NPM') {
        sh 'nrm use npm; nrm current; npm --version; node --version; node -v'
        echo '开始发布产品 ....'
+       sh 'npm publish'
+       echo 'xueboren'
+       echo '0810boren1118'
    }
 }
