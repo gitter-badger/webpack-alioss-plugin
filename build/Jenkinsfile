@@ -11,7 +11,7 @@ node {
        echo '开始执行构建 ....'
    }
    stage('NPM') {
-       sh 'nrm use npm; nrm current; node -v'
+       sh 'nrm use npm; nrm current; npm --version; node --version; node -v'
        echo '开始发布产品 ....'
    }
 }
