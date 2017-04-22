@@ -3,6 +3,7 @@ node {
    stage('Git') {
        checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/borenXue/webpack-alioss-plugin.git']]])
        sh 'nrm use taobao; nrm current;'
+       sh 'node -v'
    }
    stage('Test') {
        echo '开始运行测试用例 ....'
