@@ -8,6 +8,12 @@
   "bugs": {
     "url": "https://github.com/borenXue/webpack-alioss-plugin/issues/new"
   },
+  "script": {
+    "build": "node --harmony build/build.js"
+  },
+  "engines": {
+    "node": ">=5.0.0"
+  },
   "homepage": "http://www.xueboren.com",
   "author": "borenXue <boren.xue@outlook.com> (http://www.xueboren.com)",
   "dependencies": {
